@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Plan
+from .models import Plan, TeamMember
 
 # Create your views here.
 def home(request):
@@ -21,7 +21,7 @@ def plans(request, plan = ""):
 def team(request):
     
     context = {
-        'none' : 'none'
+        'team_members' : TeamMember.objects.all().order_by('order')
     }
 
     return render(request, 'pages/team.html', context)

@@ -34,32 +34,58 @@
 
     <!-- DIFERENTES MIEMBROS DEL MISMO EQUIPO -->
 
-    <div class="row mt-5 pt-5">
+    {% for x in team_members %}
 
-        <div class="col-md-6">
+        {% if x.order|divisibleby:2 == True %}
+        <div class="row mt-5 pt-5">
 
-            <h2 class="mt-4" style="font-weight: 600;">Jose Peña Seco</h2>
-            <h5 class="text-secondary mt-2">CTO & Cofounder</h5>
-            <p class="text-secondary mt-3">
+            <div class="col-md-6 text-center">
 
-                Somos un grupo de jovenes emprendedores expertos en todas las materias relevantes
-                dentro de el desarrollo de un negocio online. Detrás de un buen producto siempre existe
-                un buen equipo trabajando por el. Por eso queremos que nos conozcais.
+                <img width="100%" src="/media/{{ x.image }}" style="border-radius: 20px;" height="450px"></img>
+            </div>
 
 
-            </p>
+            <div class="col-md-6">
+
+                <h2 class="mt-4" style="font-weight: 600;">{{ x.name}} </h2>
+                <h5 class="text-secondary mt-2">{{ x.rol }}</h5>
+                <p class="text-secondary mt-3">
+
+                    {{ x.description }}
+
+                </p>
+            </div>
+
+
         </div>
-        <div class="col-md-6 text-center">
+        
+        {% else %}
 
-            <img width="100%" src="https://image.freepik.com/free-photo/young-woman-yellow-background-holding-book-giving-it-someone_1368-26412.jpg" style="border-radius: 20px;"></img>
+        <div class="row mt-5 pt-5">
+
+            <div class="col-md-6">
+
+                <h2 class="mt-4" style="font-weight: 600;">{{ x.name}} </h2>
+                <h5 class="text-secondary mt-2">{{ x.rol }}</h5>
+                <p class="text-secondary mt-3">
+
+                    {{ x.description }}
+
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+
+                <img width="100%" src="/media/{{ x.image }}" style="border-radius: 20px; " height="450px"></img>
+            </div>
+
+
+
+
         </div>
 
+        {% endif %}
 
-
-
-    </div>
-
-
+    {% endfor %}
 
 
 

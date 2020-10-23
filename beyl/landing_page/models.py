@@ -26,3 +26,10 @@ class PlanFeature(models.Model):
         return self.text
 
 
+class TeamMember(models.Model):
+    name = models.CharField(max_length=255)
+    rol = models.CharField(max_length=400)
+    description = models.TextField()
+    image = models.ImageField()
+    order = models.IntegerField(default=1)
+
