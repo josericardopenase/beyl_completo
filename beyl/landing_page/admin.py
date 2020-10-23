@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models  import Plan, PlanInclude, PlanFeature, TeamMember
+from .models  import Plan, PlanInclude, PlanFeature, TeamMember, Feature
 
 
 class PlanIncludeInline(admin.TabularInline):
@@ -13,3 +13,4 @@ class PlanAdmin(admin.ModelAdmin):
 admin.site.register( Plan , PlanAdmin )
 admin.site.register(PlanFeature)
 admin.site.register(TeamMember)
+admin.site.register(Feature)

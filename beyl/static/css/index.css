@@ -35,7 +35,7 @@ h5 {
 }
 
 bold {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .text-secondary {
@@ -220,6 +220,12 @@ bold {
 }
 .plan-select-inactive p {
   font-size: 10px;
+}
+
+.feature {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=index.css.map */

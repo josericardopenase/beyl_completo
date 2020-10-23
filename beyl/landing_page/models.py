@@ -33,3 +33,8 @@ class TeamMember(models.Model):
     image = models.ImageField()
     order = models.IntegerField(default=1)
 
+
+class Feature(models.Model):
+    title=models.CharField(max_length=400)
+    description=models.TextField()
+    image = models.ImageField()

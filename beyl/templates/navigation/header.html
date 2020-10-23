@@ -9,7 +9,7 @@
         <a href="{% url 'home' %}" class="text-decoration-none" ><p class="nav-header text-secondary {% if request.resolver_match.url_name == "home" %}nav-header-active{% endif %}">Inicio</p></a>
         <a href="{% url 'team' %}" class="text-decoration-none"><p  class="nav-header text-secondary {% if request.resolver_match.url_name == "team" %}nav-header-active{% endif %}">Equipo</p></a>
         <a href="{% url 'plans' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'plans' or request.resolver_match.url_name == 'anual_plans' %}nav-header-active{% endif %}">Planes</p></a>
-        <p class="nav-header text-secondary">¿Porque Beyl?</p>
+        <a href="{% url 'features' %}"  class="text-decoration-none" ><p  class="nav-header text-secondary {% if request.resolver_match.url_name == 'features' %}nav-header-active{% endif %}">¿Que te ofrecemos?</p></a>
     </div>
 
     <div class="boton1">Contactanos</div>

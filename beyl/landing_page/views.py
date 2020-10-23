@@ -25,3 +25,13 @@ def team(request):
     }
 
     return render(request, 'pages/team.html', context)
+
+
+def features(request):
+    
+    context = {}
+
+    return render(request, 'pages/features.html', context)
+
+
+
