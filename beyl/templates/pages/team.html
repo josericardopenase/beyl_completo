@@ -39,9 +39,9 @@
         {% if x.order|divisibleby:2 == True %}
         <div class="row mt-5 pt-5">
 
-            <div class="col-md-6 text-center">
+            <div class="col-md-6">
 
-                <img width="100%" src="/media/{{ x.image }}" style="border-radius: 20px; object-fit:cover !important;" height="450px"></img>
+                <img width="100%" src="{{ x.image.url }}" style="border-radius: 20px; object-fit:cover !important;" height="450px"></img>
             </div>
 
 
@@ -75,7 +75,7 @@
             </div>
             <div class="col-md-6 text-center">
 
-                <img width="100%" src="/media/{{ x.image }}" style="border-radius: 20px; object-fit:cover !important;"  height="450px"></img>
+                <img width="100%" src="{{ x.image.url }}" style="border-radius: 20px; object-fit:cover !important;"  height="450px"></img>
             </div>
 
 

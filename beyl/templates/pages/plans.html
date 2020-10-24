@@ -47,7 +47,7 @@
                     <div>
                         <h3 class="mt-2"><bold>{{x.name}}</bold></h3>
                         
-                        <h2>{% if x.contact %} Contacta{%else%}  {{x.price}}€ <span>/mes</span> {%endif%}</h2>
+                        <h2>{% if x.contact %} Contacta{%else%} {% if plan != 'anual' %}   {{x.price}}€  <span>/mes</span>  {% else %} {{x.price_anual}}€ <span>/año</span> {% endif %} {%endif%}</h2>
                         
                         {% if x.contact == False %}
                             <h4>Hasta {{x.max_peaple}} clientes a la vez</h4>
