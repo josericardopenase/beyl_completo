@@ -37,4 +37,7 @@ def features(request):
     return render(request, 'pages/features.html', context)
 
 
+def faq(request):
+
+    return render(request, 'pages/faq.html')
 
