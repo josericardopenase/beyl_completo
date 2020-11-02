@@ -9,12 +9,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <title>Document</title>
+    <script src = "{% static 'javascript/nav.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.0.1/dist/aos.js"></script>
+    <title>Beyl</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="{% static 'images/logobeyl.png'  %}">
 </head>
 
 
 
-<body class="">
+<body style="overflow-x: hidden !important">
     {% include 'navigation/header.html' %}
 
     <div class="container" style="max-width: 1500px;">
@@ -27,4 +31,8 @@
 
     {% include 'navigation/footer.html' %}
 </body>
+
+<script>
+AOS.init({disable: 'mobile'});
+</script>
 </html>

@@ -56,6 +56,11 @@ bold
 
 
 //===============================================0
+#header
+  animation: 1s all linear  
+  position: absolute 
+
+
 .boton1
     padding: 12px 23px
     background-color: $color_beyl
@@ -105,6 +110,7 @@ bold
     padding: 5px 10px
     margin-left: 10px
     margin-top: 50px
+    z-index: 10
 
 
     h5
@@ -128,6 +134,7 @@ bold
     bottom: 0
     right: 0
     margin: 10px
+    z-index: 20 !important
 
     h5
         margin-left: 15px !important
@@ -248,3 +255,52 @@ bold
     border-radius: 10px
     max-width: 600px
     width: 100%
+
+.h-menu
+
+    z-index: 200
+    transition: 0.5s all linear
+    .bar
+        transition: 0.2s all ease
+        height: 3px
+        width: 25px
+        margin-top: 4px
+        background-color: black
+
+
+.h-active
+    transition: 0.5s all linear
+
+    .bar
+        background-color: white
+    .bar-1
+        margin-top: 1px
+        transform: rotate(45deg) !important
+    
+    .bar-3
+        margin-top: -2px
+        transform: rotate(-45deg) !important
+
+    .bar-2
+        background-color: #fcfcfc00 !important
+        position: absolute
+
+.mobile-menu
+    transition: 0.5s all ease
+    position: fixed
+    background-color: #000000d7
+    width: 100%
+    height: 100vh
+    z-index: 100
+
+    p
+        margin: 0px !important
+    .text-secondary
+        color: white !important 
+        font-size: 30px !important
+        margin-top: 20px !important
+    
+
+    .nav-header-active
+        color: $color_beyl !important
+
